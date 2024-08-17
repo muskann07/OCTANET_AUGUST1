@@ -1,0 +1,132 @@
+/* styles.css */
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('https://i.pinimg.com/originals/a1/9d/8e/a19d8ef679265caed6db046bcbb1dc9e.jpg') no-repeat center center fixed; /* Replace with your background image URL */
+    background-size: cover;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Prevents the entire body from scrolling */
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    padding: 30px; /* Increased padding */
+    border-radius: 10px;
+    width: 100%;
+    max-width: 500px; /* Increased maximum width */
+    max-height: 80vh; /* Limits the container height */
+    overflow-y: auto; /* Adds vertical scroll if content exceeds container height */
+    backdrop-filter: blur(10px); /* Adds a blur effect to the background */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 26px; /* Slightly larger title font */
+    color: #007bff; /* Colorful title */
+}
+
+header input {
+    width: 75%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+header button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+header button:hover {
+    background-color: #218838;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.filter-btn {
+    background-color: #ff4757; /* Vibrant button color */
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+filter-btn:hover {
+    background-color: #e84118;
+}
+
+ul#task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+ul#task-list li {
+    background-color: #f8f9fa;
+    padding: 20px; /* Increased padding for tasks */
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+    border-left: 5px solid #007bff; /* Add a colorful border to each task */
+}
+
+ul#task-list li.completed {
+    text-decoration: line-through;
+    color: #888;
+    border-left: 5px solid #28a745; /* Change border color for completed tasks */
+}
+
+ul#task-list li:hover {
+    background-color: #e9ecef;
+}
+
+ul#task-list li .task-actions {
+    display: flex;
+    gap: 10px;
+}
+
+ul#task-list li .task-actions button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #333;
+}
+
+ul#task-list li .task-actions button:hover {
+    color: #007bff;
+}
+
+@media (max-width: 400px) {
+    .container {
+        width: 95%;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+}
